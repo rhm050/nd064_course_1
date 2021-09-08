@@ -128,3 +128,11 @@ INFO:app:Article "CNCF Cloud Native Interactive Landscape" retrieved!
 INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:59] "GET /4 HTTP/1.1" 200 -
 INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:14:05] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.4:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.1.4 - - [09/Sep/2021 02:21:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [09/Sep/2021 02:21:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.4:3111/ (Press CTRL+C to quit)
