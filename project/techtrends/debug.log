@@ -1,0 +1,130 @@
+2021-09-08 00:17:29,196, _log  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-08 00:17:29,197, _log  * Running on http://192.168.1.5:3111/ (Press CTRL+C to quit)
+2021-09-08 00:17:32,398, log_exception Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 60, in index
+    connection = get_db_connection()
+  File "app.py", line 15, in get_db_connection
+    db_connection_count += 1
+UnboundLocalError: local variable 'db_connection_count' referenced before assignment
+2021-09-08 00:17:32,401, _log 192.168.1.5 - - [08/Sep/2021 00:17:32] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-09-08 00:23:15,970, _log  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-08 00:23:15,971, _log  * Running on http://192.168.1.5:3111/ (Press CTRL+C to quit)
+2021-09-08 00:23:19,328, _log 192.168.1.5 - - [08/Sep/2021 00:23:19] "GET / HTTP/1.1" 200 -
+2021-09-08 00:23:19,415, _log 192.168.1.5 - - [08/Sep/2021 00:23:19] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-09-08 00:23:27,631, log_exception Exception on /metrics [GET]
+Traceback (most recent call last):
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 53, in metrics
+    response = json.dumps({"status":"success", "code":0, "data":{"post_count":post_count, "db_connection_count":db_connection_count}}),
+NameError: name 'post_count' is not defined
+2021-09-08 00:23:27,633, _log 192.168.1.5 - - [08/Sep/2021 00:23:27] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2021-09-08 00:23:38,626, _log 192.168.1.5 - - [08/Sep/2021 00:23:38] "GET /healthz HTTP/1.1" 200 -
+2021-09-08 00:25:02,428, _log  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-08 00:25:02,428, _log  * Running on http://192.168.1.5:3111/ (Press CTRL+C to quit)
+2021-09-08 00:25:04,814, _log 192.168.1.5 - - [08/Sep/2021 00:25:04] "GET / HTTP/1.1" 200 -
+2021-09-08 00:25:04,887, _log 192.168.1.5 - - [08/Sep/2021 00:25:04] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2021-09-08 00:25:13,879, _log 192.168.1.5 - - [08/Sep/2021 00:25:13] "GET /healthz HTTP/1.1" 200 -
+2021-09-08 00:25:22,491, _log 192.168.1.5 - - [08/Sep/2021 00:25:22] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:25:27,060, _log 192.168.1.5 - - [08/Sep/2021 00:25:27] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:25:29,563, _log 192.168.1.5 - - [08/Sep/2021 00:25:29] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:25:31,513, _log 192.168.1.5 - - [08/Sep/2021 00:25:31] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:25:33,496, _log 192.168.1.5 - - [08/Sep/2021 00:25:33] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:41:57,666, _log  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-08 00:41:57,667, _log  * Running on http://192.168.1.5:3111/ (Press CTRL+C to quit)
+2021-09-08 00:42:01,376, log_exception Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rakib_365squared\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 63, in index
+    connection = get_db_connection()
+  File "app.py", line 16, in get_db_connection
+    app.config['DB_CONN_COUNTER'] += 1
+KeyError: 'DB_CONN_COUNTER'
+2021-09-08 00:42:01,380, _log 192.168.1.5 - - [08/Sep/2021 00:42:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-09-08 00:44:57,532, _log  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2021-09-08 00:44:57,533, _log  * Running on http://192.168.1.5:3111/ (Press CTRL+C to quit)
+2021-09-08 00:44:59,533, _log 192.168.1.5 - - [08/Sep/2021 00:44:59] "GET / HTTP/1.1" 200 -
+2021-09-08 00:44:59,660, _log 192.168.1.5 - - [08/Sep/2021 00:44:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2021-09-08 00:45:03,930, _log 192.168.1.5 - - [08/Sep/2021 00:45:03] "GET /metrics HTTP/1.1" 200 -
+2021-09-08 00:45:10,963, _log 192.168.1.5 - - [08/Sep/2021 00:45:10] "GET /healthz HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.4:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:02] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:app:Article 2020 CNCF Annual Report retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:16] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article KubeCon + CloudNativeCon 2021 retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:28] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article CNCF Cloud Native Interactive Landscape retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:30] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:30] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article Kubernetes Certification retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:34] "GET /6 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:47] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:09:54] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.4:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:05] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article "CNCF Cloud Native Interactive Landscape" retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:08] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article "CNCF Cloud Native Definition v1.0" retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:11] "GET /5 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:11] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:The 'About Us' page is retrieved.
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:17] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:12:26] "GET /metrics HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://192.168.1.4:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:53] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:55] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article "2020 CNCF Annual Report" retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:57] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:57] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:app:Article "CNCF Cloud Native Interactive Landscape" retrieved!
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:59] "GET /4 HTTP/1.1" 200 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:13:59] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:192.168.1.4 - - [08/Sep/2021 18:14:05] "GET /metrics HTTP/1.1" 200 -
