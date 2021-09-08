@@ -9,3 +9,4 @@ EXPOSE 3111
 RUN pip install -U pip && pip install -r requirements.txt 
 
 CMD python init_db.py ; python app.py
+
