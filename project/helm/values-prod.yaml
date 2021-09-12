@@ -1,5 +1,5 @@
 namespace:
-  name: prod 
+  name: prod
 
 service:
   port: 7111
@@ -16,4 +16,3 @@ resources:
   limits:
     memory: 256Mi
     cpu: 500m
-

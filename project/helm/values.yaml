@@ -1,5 +1,5 @@
 namespace:
-  name: sandbox 
+  name: sandbox
 
 service:
   port: 4111
@@ -8,7 +8,7 @@ service:
   type: ClusterIP
 
 image:
-  repository: mdrakibulhasan/techtrends 
+  repository: mdrakibulhasan/techtrends
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -24,10 +24,8 @@ resources:
 
 containerPort: 3111
 
-livenessProbe: 
+livenessProbe:
   path: /healthz
 
 readinessProbe:
   path: /healthz
-
-
